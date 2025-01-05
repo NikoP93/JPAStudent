@@ -21,6 +21,11 @@ public class StudentRestController {
         return obj;
     }
 
+    @GetMapping("/")
+    public String detteErRoden(){
+        return "Du er i roden af JPA STUDENT";
+    }
+
     @GetMapping("students/{name}")
     public List<Student> getAllStudentsByName(@PathVariable String name) {
         return studentRepository.findAllByName(name);
